@@ -1,4 +1,4 @@
-# benford
+# Demonstrating Benford's law
 
 This small Kotlin program shows that random numbers with an equally distributed exponent 
 (of the binary exponential representation) follow Benford's law; 
