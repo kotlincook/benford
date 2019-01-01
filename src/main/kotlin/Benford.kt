@@ -19,7 +19,7 @@ fun randomBinary() = if (Math.random() < 0.5) ZERO else ONE
 fun randomExponent() = (Math.random() * MAX_EXPONENT).toInt()
 
 fun randomNumber(): BigInteger {
-    var result = valueOf(0)
+    var result = ZERO
 
     repeat(NO_OF_DIGITS) {
         result = result * TWO + randomBinary()
