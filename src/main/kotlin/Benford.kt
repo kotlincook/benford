@@ -8,17 +8,12 @@ val NO_SAMPLES = 1000000
 
 fun firstDigit(number: BigInteger) = number.toString()[0].toInt() - 48
 
-fun printDestribution(frequencies: Array<Int>) {
-    frequencies.forEachIndexed { index, elem ->
-        println("$index: ${elem.toFloat() / NO_SAMPLES.toFloat()}" )
-    }
-}
-
 fun randomBinary() = if (Math.random() < 0.5) ZERO else ONE
 
 fun randomExponent() = (Math.random() * MAX_EXPONENT).toInt()
 
 fun randomNumber(): BigInteger {
+
     var result = ZERO
 
     repeat(NO_OF_DIGITS) {
@@ -30,9 +25,14 @@ fun randomNumber(): BigInteger {
     return result
 }
 
+fun printDestribution(frequencies: Array<Int>) {
+    frequencies.forEachIndexed { index, elem ->
+        println("$index: ${elem.toFloat() / NO_SAMPLES.toFloat()}" )
+    }
+}
 
-fun main(args: Array<String>) {
 
+fun main() {
     val frequencies = Array(10) { 0 }
 
     repeat(NO_SAMPLES) {
@@ -41,5 +41,4 @@ fun main(args: Array<String>) {
     }
 
     printDestribution(frequencies)
-
 }
