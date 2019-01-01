@@ -6,14 +6,11 @@ val MAX_EXPONENT = 1000
 val NO_SAMPLES = 1000000
 
 
-fun firstDigit(number: BigInteger) = number.toString()[0].toInt() - 48
-
 fun randomBinary() = if (Math.random() < 0.5) ZERO else ONE
 
 fun randomExponent() = (Math.random() * MAX_EXPONENT).toInt()
 
 fun randomNumber(): BigInteger {
-
     var result = ZERO
 
     repeat(NO_OF_DIGITS) {
@@ -24,6 +21,8 @@ fun randomNumber(): BigInteger {
     }
     return result
 }
+
+fun firstDigit(number: BigInteger) = number.toString()[0].toInt() - 48
 
 fun printDestribution(frequencies: Array<Int>) {
     frequencies.forEachIndexed { index, elem ->
