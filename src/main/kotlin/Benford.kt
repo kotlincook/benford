@@ -4,6 +4,7 @@ import java.math.BigInteger.*
 val NO_OF_DIGITS = 20
 val MAX_EXPONENT = 1000
 val NO_SAMPLES = 1000000
+val TWO = BigInteger.valueOf(2) // for Java-Versions < 11
 
 
 fun randomBinary() = if (Math.random() < 0.5) ZERO else ONE
