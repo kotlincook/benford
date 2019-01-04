@@ -27,7 +27,7 @@ fun firstDigit(number: BigInteger) = number.toString()[0].toInt() - 48
 
 fun printDestribution(frequencies: Array<Int>) {
     frequencies.forEachIndexed { index, elem ->
-        println("$index: ${elem.toFloat() / NO_SAMPLES.toFloat()}" )
+        println("$index: ${elem.toFloat() / frequencies.sum()}" )
     }
 }
 
